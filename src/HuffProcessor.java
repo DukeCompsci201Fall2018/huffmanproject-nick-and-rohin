@@ -160,8 +160,8 @@ public class HuffProcessor {
 		int bit = in.readBits(1);
 		
 		if (bit == 0) {
-			HuffNode left = readTreeHeader(in).myLeft;
-			HuffNode right = readTreeHeader(in).myRight;
+			HuffNode left = readTreeHeader(in);
+			HuffNode right = readTreeHeader(in);
 			return new HuffNode(0, 0, left, right);
 		}
 		else if (bit == -1) {
